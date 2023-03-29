@@ -47,7 +47,7 @@ body{
 .circus{
     width:200px;
     height:200px;
-    border:15px solid transparent;
+    border:15px solid lightgrey;
     border-top:15px solid black;
     border-radius:50%;
     margin:20px;
@@ -663,4 +663,38 @@ body{
     60%{transform:translate3d(0px,0px,0px)}
     80%{transform:translate3d(0px,-65px,0px)}
     100%{transform:translate3d(0px,0px,0px)}
+}
+.move{
+    width:300px;
+    height:200px;
+    border-radius:10px;
+    background-color:lightgreen;
+}
+.move_1{
+    width:280px;
+    height:50px;
+    padding:0px;
+    margin:12px auto;
+    background-color:lightcyan;
+    border-radius:10px;
+}
+.move_2{
+    width:50px;
+    height:50px;
+    background-color:rgb(68, 158, 68);
+    border-radius:10px;
+    animation: diff 3s alternate infinite ease-in-out;
+}
+#diff{
+    float:right;
+}
+#diff_2{
+    animation-delay:-0.5s;
+}
+@keyframes diff{
+    0%{width:50px}
+    25%{width:224px;}
+    50%{width:112px;}
+    75%{width:168px}
+    100%{width:280px;}
 }
