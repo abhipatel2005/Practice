@@ -149,7 +149,7 @@ body{
     animation:fcc 0.8s infinite alternate ;
 }
 #_2,#_4{
-    animation-delay:0.3s;
+    animation-delay:0.2s;
 }
 #_5,#_1{
     animation-delay:0.5s;
@@ -697,4 +697,50 @@ body{
     50%{width:112px;}
     75%{width:168px}
     100%{width:280px;}
+}
+.fanner{
+    width:140px;
+    height:140px;
+    /* background-color:yellow; */
+    margin:0px 20px;
+    animation: fan 4s infinite ease-in-out;
+}
+.fan{
+    width:50px;
+    height:50px;
+    background: radial-gradient(yellow,orange,rgb(235, 166, 38));
+    animation:golakar 4s infinite ease-in-out alternate;  
+}
+#fan_1{
+    position:relative;
+    top:15px;
+    left:15px;
+    border-radius:30px 20px 0px 20px;
+}
+#fan_2{
+    position:relative;
+    top:-35px;
+    left:70px;
+    border-radius:20px 30px 20px 0px;
+}
+#fan_3{
+    position: relative;
+    top:-30px;
+    left:15px;
+    border-radius:20px 0px 20px 30px;
+}
+#fan_4{
+    position: relative;
+    top:-80px;
+    left:70px;
+    border-radius:0px 20px 30px 20px;
+}
+@keyframes fan{
+    0%{scale:1}
+    100%{rotate:360deg;}
+}
+@keyframes golakar{
+    0%{scale:1.0}
+    50%{rotate:360deg}
+    100%{scale: 1.0}
 }
