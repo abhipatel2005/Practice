@@ -149,9 +149,9 @@ body{
     animation:fcc 0.8s infinite alternate ;
 }
 #_2,#_4{
-    animation-delay:0.2s;
+    animation-delay:0.3s;
 }
-#_3{
+#_5,#_1{
     animation-delay:0.5s;
 }
 @keyframes fcc{
