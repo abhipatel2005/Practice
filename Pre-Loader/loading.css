@@ -744,3 +744,16 @@ body{
     50%{rotate:360deg}
     100%{scale: 1.0}
 }
+.shapes{
+    width:100px;
+    height:100px;
+    margin:15px;
+    background-color:rgb(22, 86, 98);
+    border-radius:50%;
+    animation:change 1s infinite alternate;
+}
+@keyframes change{
+    0%{opacity:0.5}
+    50%{transform: scale(0.7);}
+    100%{transform:scale(1.2)}
+}
