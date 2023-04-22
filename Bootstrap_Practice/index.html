@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Let's Code</title>
+    <link rel="icon" href="./logo.png">   
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-primary-subtle">
+      <div class="container-fluid">
+
+          <a class="navbar-brand" href="#">Let's Code</a>
+
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="#features">Features</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="#photo-gallery">Gallery</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="#contact">Contact</a>
+              </li>
+              
+            </ul>
+          </div>
+          </div>
+      </nav>
+      
+      <!-- title section -->
+
+      <section id="title" class="bg-primary-subtle">
+        <div class="row">
+          <div class="col-lg-6">
+            <h1 class="big-heading">For the Students,<br>By The Students.</h1>
+          </div>
+          <div class="col-lg-6">
+            <img src="https://www.auronova.in/images/feature/nlp-overview.png" class="title-img" alt="">
+          </div>
+        </div>
+      </section>
+
+      <!-- features -->
+
+      <section id="features">
+
+        <h2 class="feature-heading">Let's Code Revolves Around...</h2>
+
+        <div class="row">
+          <div class="col-lg-4 col-md-6 pb-4 mb-sm-0">
+            <div class="card">
+              <div class="card-body">
+                <span class="material-symbols-rounded">
+                  web
+                  </span>
+                <h5 class="card-title">Web-Development</h5>
+                <p class="card-text">HTML | CSS | JavaScript</p>
+                <a href="#" class="btn btn-outline-primary">Let's Go...!</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 pb-4">
+            <div class="card">
+              <div class="card-body">
+                <span class="material-symbols-rounded">
+                  terminal
+                  </span>
+                <h5 class="card-title">Backend Development</h5>
+                <p class="card-text">C | C++ | Java | JS</p>
+                <a href="#" class="btn btn-outline-primary">Let's Go...!</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 pb-4">
+            <div class="card">
+              <div class="card-body">
+                <span class="material-symbols-rounded">
+                  smart_toy
+                  </span>
+                <h5 class="card-title">AI/ML Robotics</h5>
+                <p class="card-text">Python | C++ | Java</p>
+                <a href="#" class="btn btn-outline-primary">Let's Go...!</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6 col-md-6 pb-4">
+            <div class="card">
+              <div class="card-body">
+                <span class="material-symbols-rounded">
+                  developer_mode
+                  </span>
+                <h5 class="card-title">App Development</h5>
+                <p class="card-text">Java | Swift</p>
+                <a href="#" class="btn btn-outline-primary">Let's Go...!</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6 col-md-6">
+            <div class="card">
+              <div class="card-body">
+                <span class="material-symbols-rounded">   
+                  wifi_home
+                  </span>
+                <h5 class="card-title">UI / UX Design</h5>
+                <p class="card-text">Wireframing | prototyping </p>
+                <a href="#" class="btn btn-outline-primary">Let's Go...!</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </section>
+
+      <!-- photo-gallery -->
+
+      <section id="photo-gallery" class="bg-success-subtle">
+
+        <h2 class="photo-gallery-heading">Let's have look...</h2>
+
+        <div id="carouselExampleCaptions" class="carousel slide">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>  
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="https://www.epsilon-informatics.gr/sites/default/files/logo-programmatvn/web%20development.png" class="d-block w-100 photo-gallery-img" alt="...">
+              <div class="carousel-caption d-none d-md-block">
+                <h5 class="img-text">Web-Development</h5>
+                <p class="img-text">You can see what is Web-Dev..!</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="https://media.enlabsoftware.com/wp-content/uploads/2022/12/17155736/cshap-MeetingOur-C-Development.png" class="d-block w-100 photo-gallery-img" alt="...">
+              <div class="carousel-caption d-none d-md-block">
+                <h5 class="img-text">Back-End Developement</h5>
+                <p class="img-text">BackEnd is all about back which can't be seen by us but most important.</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="https://global.hitachi-solutions.com/wp-content/uploads/2021/11/BlogBanner-AI-Vs-Machine-Learning-Whats-The-Difference-1021-ver2.png" class="d-block w-100" alt="...">
+              <!-- <div class="carousel-caption d-none d-md-block">
+                <h5 class="img-text">Third slide label</h5>
+                <p class="img-text">Some representative placeholder content for the third slide.</p>
+              </div> -->
+            </div>
+            <div class="carousel-item">
+              <img src="https://codism.io/wp-content/uploads/2019/11/UI-UX-011.png" class="d-block w-100 photo-gallery-img" alt="...">
+              <div class="carousel-caption d-none d-md-block">
+                <h5 class="img-text">UI/UX Design</h5>
+                <p class="img-text">Let's Do Something Creative...</p>
+              </div>
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <!-- <span class="visually-hidden">Previous</span> -->
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <!-- <span class="visually-hidden">Next</span> -->
+          </button>
+        </div>
+
+      </section>
+
+      <!-- Contact section-->
+
+      <section id="contact">
+
+        <a href="#"><i class="	fa fa-linkedin-square"></i> LinkedIn</a>
+        <a href="#"><i class="	fa fa-instagram"></i> Instagram</a>
+        <a href="#"><i class="	fa fa-envelope-o"></i> Mail</a>
+
+        <h6>&copy; copyright reserved by, Let's Code.</h6>
+
+      </section>
+</body>
+</html>
