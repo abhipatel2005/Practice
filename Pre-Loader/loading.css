@@ -8,7 +8,7 @@ body{
     flex-wrap:wrap;
     background-color: white;
 }
-/* animation_1 */
+/* animation-1 */
 .loading{
     width:200px;
     height:200px;
@@ -43,7 +43,7 @@ body{
     border-bottom:15px solid transparent;
     animation:rotate 2.5s infinite ease-in-out reverse;
 }
-/* animation_3 */
+/* animation-3 */
 .circus{
     width:200px;
     height:200px;
@@ -58,7 +58,7 @@ body{
     50%{border:15px solid black;border-top:15px solid white;}
     100%{transform: rotate(360deg);}
 }
-/* animation_4 */
+/* animation-4 */
 .sbl-circ-dual{
     height:200px;
     width:200px;
@@ -92,7 +92,7 @@ body{
         transform:rotate(360deg);
     }
 }
-/* animation_5 */
+/* animation-5 */
 .circular{
     width:200px;
     height:200px;
@@ -108,7 +108,7 @@ body{
     position:relative;
     top:15px;
     left:15px;
-    border:10px solid black;
+    border:10px solid rgba(0, 0, 0, 0.847);
     border-top:10px solid white;
     animation: rotor 3s linear infinite;
 }
@@ -123,15 +123,26 @@ body{
     position:absolute;
     top:20px;
     right:20px;
-    border:10px solid black;
+    border:10px solid rgba(0, 0, 0, 0.737);
     border-bottom:10px solid white;
     animation:rotor 3s linear infinite reverse;
+}
+.circular_4{
+    width:50px;
+    height:50px;
+    border-radius: 50%;
+    position:absolute;
+    top:10px;
+    left:10px;
+    border:10px solid rgba(0, 0, 0, 0.63);
+    border-right:10px solid white;
+    animation:rotor 10s linear infinite reverse;
 }
 @keyframes inner{
     0%{transform: rotate(0);}
     100%{transform: rotate(450deg);}
 }
-/* animation_6 */
+/* animation-6 */
 .dots{
     width:100px;
     height:100px;
@@ -159,7 +170,7 @@ body{
     100%{height:30%}
 }
 
-/* animation_7 */
+/* animation-7 */
 .big{
     display: flex;
     width:150px;
@@ -183,7 +194,7 @@ body{
 #small_3{animation-delay:0.6s;}
 /* #small_4{animation-delay:0.5s; } */
 
-/* animation_8 */
+/* animation-8 */
 .co{
     width:200px;
     height:100px;
@@ -207,7 +218,7 @@ body{
 #co_3{background-color:blue;animation-delay:0.3s}
 #co_4{background-color:green;animation-delay:0.4s}
 
-/* animation_9 */
+/* animation-9 */
 
 .choras{
     width:150px;
@@ -255,7 +266,7 @@ body{
     50%{background-color:blue;scale:0.7;}
 }
 
-/* animation_10 */
+/* animation-10 */
 
 .voice{
     width:180px;
@@ -320,7 +331,7 @@ body{
     100%{transform:rotate(-360deg);scale:1.3;}
 }
 
-/* animation_12 */
+/* animation-12 */
 
 .vikarna{
     width:200px;
@@ -345,7 +356,7 @@ body{
     border-top-right-radius:100px;
     background: linear-gradient(45deg,white,rgb(23, 126, 145));
 }
-/* animation_13 */
+/* animation-13 */
 
 .slide_loading{
     width:500px;
@@ -359,11 +370,11 @@ body{
     height:30px;
     background-color:black;
     border-radius: 20px;
-    animation:slide 3s infinite alternate both;
+    animation:slide 3s infinite ease-in-out alternate;
 }
 
 @keyframes slide{
-    0%{width:0px;}
+    0%{width:30px;}
     20%{width:50px;}
     40%{width:100px;}
     60%{width:250px;}
@@ -371,28 +382,25 @@ body{
     100%{width:500px;}
 }
 
-/* animation_14 */
+/* animation-14 */
 
-.tri_1{
-    width:500px;
-    height:30px;
-    border-radius:20px;
-    background-color:whitesmoke;
-    overflow:hidden;
-}
 .slider_1{
     background-color:black;
     width:50px;
     height:30px;
     border-radius:20px;
-    animation:translate 3s  infinite;
+    animation:slide_2 3s infinite ease-in-out alternate;
 }
-@keyframes translate{
-    0%{transform: translate(-50px);}
-    100%{transform: translate(550px);}
+@keyframes slide_2{
+    0%{width:30px;}
+    20%{width:50px;background-color:#B9D9EB}
+    40%{width:100px;background-color: #00B9F1;}
+    60%{width:250px;background-color: #003153;}
+    80%{width:350px;background-color: #002E6E;}
+    100%{width:500px;}
 }
 
-/* animation_15 */
+/* animation-15 */
 .rakhnar{
     width:150px;
     height:150px;
@@ -421,7 +429,7 @@ body{
     100%{transform:scale(0.2)}
 }
 
-/* animation_16 */
+/* animation-16 */
 .lines{
     width:200px;
     height:150px;
@@ -443,11 +451,11 @@ body{
 #line_5{animation-delay:0.4s;}
 #line_6{animation-delay:0.5s;}
 @keyframes vadharo{
-    0%{height:140px;}
+    0%{height:140px;background-color: #00B9F1;}
     100%{height:20px;}
 }
 
-/* animation_17 */
+/* animation-17 */
 .chakkar_container{
     width:160px;
     height:160px;
@@ -490,7 +498,7 @@ body{
     75%{transform: rotate(-90deg);}
 }
 
-/* animation_18 */
+/* animation-18 */
 .twos{
     display: flex;
 }
@@ -519,7 +527,7 @@ body{
     100%{transform:translate(0px);z-index:-1;}
 }
 
-/* animation_19 */
+/* animation-19 */
 .triangle{
     width:100px;
     height:100px;
@@ -669,35 +677,34 @@ body{
     width:300px;
     height:200px;
     border-radius:10px;
-    background-color:lightgreen;
+    background-color:#B9D9EB;
 }
 .move_1{
     width:280px;
     height:50px;
-    padding:0px;
     margin:12px auto;
-    background-color:lightcyan;
+    /* background-color:#9EB9D4; */
     border-radius:10px;
 }
 .move_2{
     width:50px;
     height:50px;
-    background-color:rgb(68, 158, 68);
+    background-color:#003153;
     border-radius:10px;
-    animation: diff 3s alternate infinite ease-in-out;
+    animation: diff 2s infinite ease-in-out;
 }
-#diff{
-    float:right;
+#diff_1{
+    animation-delay:0.25s;
 }
 #diff_2{
-    animation-delay:-0.5s;
+    animation-delay:0.5s;
 }
 @keyframes diff{
     0%{width:50px}
-    25%{width:224px;}
-    50%{width:112px;}
-    75%{width:168px}
-    100%{width:280px;}
+    25%{width:280px;}
+    50%{width:150px;}
+    75%{width:200px}
+    100%{width:50px;}
 }
 
 /* animation-23 */
