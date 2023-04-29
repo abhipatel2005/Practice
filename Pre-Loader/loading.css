@@ -6,7 +6,6 @@ body{
     display: flex;
     margin:20px;
     flex-wrap:wrap;
-    background-color: white;
 }
 /* animation-1 */
 .loading{
@@ -30,18 +29,6 @@ body{
     border-top:15px solid transparent;
     border-bottom:15px solid transparent;
     animation:rotate 2.5s infinite linear;
-}
-.loading_2a{
-    position:relative;
-    top:3px;
-    left:3px;
-    border:15px solid white;
-    width:165px;
-    height:165px;
-    border-radius:50%;
-    border-top:15px solid transparent;
-    border-bottom:15px solid transparent;
-    animation:rotate 2.5s infinite ease-in-out reverse;
 }
 /* animation-3 */
 .circus{
@@ -97,6 +84,7 @@ body{
     width:200px;
     height:200px;
     border-radius: 50%;
+    margin:20px;
     border:10px solid black;
     border-bottom:10px solid white;
     animation:rotate 3s linear infinite reverse;
@@ -465,7 +453,6 @@ body{
     display: flex;
     flex-wrap:wrap;
     /* animation: new 5s ease-in-out infinite both; */
-
 }
 .chakkar{
     width:70px;
@@ -476,25 +463,25 @@ body{
 #chakkar_4{animation:khasvu 3s  ease-in-out infinite;background-color:red; }
 @keyframes khasvu{
     0%{transform:scale(1)}
-    50%{transform:translate3d(-30px,-30px,-60px);background-color:lightseagreen;}
+    50%{transform:translate3d(-30px,-30px,-60px);background-color:#00B9F1;}
     75%{transform: rotate(90deg);}
 }
 #chakkar_3{animation:khasavu_2 3s ease-in-out infinite;background-color:yellow; }
 @keyframes khasavu_2{
     0%{transform: scale(1);}
-    50%{transform:translate3d(30px,-30px,-60px);background-color:lightseagreen;}
+    50%{transform:translate3d(30px,-30px,-60px);background-color:#00B9F1;}
     75%{transform: rotate(-90deg);}
 }
 #chakkar_2{animation:khasavu_3 3s ease-in-out infinite;background-color:blue;}
 @keyframes khasavu_3{
     0%{transform: scale(1);}
-    50%{transform:translate3d(-30px,30px,-60px);background-color:lightseagreen;}
+    50%{transform:translate3d(-30px,30px,-60px);background-color:#00B9F1;}
     75%{transform: rotate(90deg);}
 }
 #chakkar_1{animation:khasavu_4 3s ease-in-out infinite;background-color:green;}
 @keyframes khasavu_4{
     0%{transform: scale(1);}
-    50%{transform:translate3d(30px,30px,60px);background-color:lightseagreen;}
+    50%{transform:translate3d(30px,30px,60px);background-color:#00B9F1;}
     75%{transform: rotate(-90deg);}
 }
 
@@ -798,4 +785,30 @@ body{
     0%{scale:1.0;}
     50%{scale:1.8}
     100%{scale:1.0;}
+}
+
+/* animation-26  */
+.changer{
+    width:150px;
+    height:150px;
+    margin:20px;
+    animation: new 3s linear infinite ;
+}
+.accepter{
+    width:130px;
+    height:130px;
+    background-color:#002E6E;
+    margin: 10px auto;
+    animation:accept 3s infinite ease-in-out;
+}
+@keyframes accept {
+    25%{
+        border-radius:100% 0px 0px 0px;
+    }
+    50%{
+        border-radius:100% 100% 0px 0px;
+    }
+    75%{
+        border-radius:100% 100% 100% 100%;
+    }
 }
