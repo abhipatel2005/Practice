@@ -7,6 +7,7 @@ body{
     margin:20px;
     flex-wrap:wrap;
 }
+
 /* animation-1 */
 .loading{
     width:200px;
@@ -19,6 +20,7 @@ body{
 @keyframes rotate{
     100%{transform:rotate(360deg)}
 }
+
 /* animation-2 */
 .loading_2{
     width:200px;
@@ -30,6 +32,7 @@ body{
     border-bottom:15px solid transparent;
     animation:rotate 2.5s infinite linear;
 }
+
 /* animation-3 */
 .circus{
     width:200px;
@@ -45,6 +48,7 @@ body{
     50%{border:15px solid black;border-top:15px solid white;}
     100%{transform: rotate(360deg);}
 }
+
 /* animation-4 */
 .sbl-circ-dual{
     height:200px;
@@ -79,6 +83,7 @@ body{
         transform:rotate(360deg);
     }
 }
+
 /* animation-5 */
 .circular{
     width:200px;
@@ -130,6 +135,7 @@ body{
     0%{transform: rotate(0);}
     100%{transform: rotate(450deg);}
 }
+
 /* animation-6 */
 .dots{
     width:100px;
@@ -207,7 +213,6 @@ body{
 #co_4{background-color:green;animation-delay:0.4s}
 
 /* animation-9 */
-
 .choras{
     width:150px;
     height:150px;
@@ -255,7 +260,6 @@ body{
 }
 
 /* animation-10 */
-
 .voice{
     width:180px;
     height:100px;
@@ -320,7 +324,6 @@ body{
 }
 
 /* animation-12 */
-
 .vikarna{
     width:200px;
     height:200px;
@@ -344,8 +347,8 @@ body{
     border-top-right-radius:100px;
     background: linear-gradient(45deg,white,rgb(23, 126, 145));
 }
-/* animation-13 */
 
+/* animation-13 */
 .slide_loading{
     width:500px;
     height:30px;
@@ -371,7 +374,6 @@ body{
 }
 
 /* animation-14 */
-
 .slider_1{
     background-color:black;
     width:50px;
@@ -538,6 +540,7 @@ body{
     0%{transform:scale(1)}
     100%{transform:scale(0.7);border-radius: 50%;}
 }
+
 /* animation-20 */
 .discord{
     display: flex;
