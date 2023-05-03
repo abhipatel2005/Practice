@@ -4,50 +4,48 @@
 body{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     margin:15px 30px;
-    font-size: 17px;
     padding: 8px;
 }
-.container{
+form{
     background-color: #f2f2f2;
     padding: 5px 20px 15px 20px;
     border:1px solid lightgray;
-    border-radius:8px;
+    border-radius:10px;
 }
 input[type="text"],
 input[type="email"],
 input[type="number"],
 input[type="password"],
 input[type="date"],
-select,
-textarea{
+input[type="submit"],
+select,textarea,fieldset{
     width:100%;
     padding:10px;
-    border:1px solid #ccc;
     border-radius:10px;
-    margin:10px auto;
+    border:1px solid #ccc;
+    background-color:#fff;
+    /* margin:10px auto; */
 }
-fieldset{
+/* fieldset{
     background-color: #fff;
     border:1px solid #ccc;
     margin:10px auto;
-    width:100%;
     border-radius:10px;
-}
+    /* width:100%; */
+/* } */ 
 .main_heading{
     text-align: center;
 }
 input[type="submit"]{
     background-color:navy;
     color:white;
-    padding: 12px 20px;
-    border:none;
-    font-weight:bolder;
-    border-radius: 5px;
     cursor: pointer;
-    width:100%;
+    font-weight:bolder;
+    /* padding: 12px 20px; */
+    /* border:none; */
+    /* border-radius: 5px; */
+    /* width:100%; */
 }
 input[type="submit"]:hover{
-background-color:rgb(40, 177, 24);
+background-color:green;
 }
-
-    
