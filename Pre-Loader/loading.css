@@ -506,9 +506,9 @@ body{
     animation: far_1 1.3s infinite ease-in-out reverse;
 }
 @keyframes far{
-    0%{transform:scale(1.0)}
+    0%{transform:scale(1.0);transform:scale(0.8)}
     50%{transform:translate(100px)}
-    100%{transform:translate(-0px)}
+    100%{transform:translate(-0px);transform:scale(0.8)}
 }
 @keyframes far_1{
     0%{transform:scale(1.0)}
@@ -813,5 +813,97 @@ body{
     }
     75%{
         border-radius:100% 100% 100% 100%;
+    }
+}
+
+/* animation-28 */
+.rect{
+    display: flex;
+    flex-wrap:wrap;
+    width:130px;
+    height:130px;
+    border-radius:10px;
+    margin:20px;
+    animation: new 3s ease-in-out infinite ;
+}
+.rect_{
+    width:50px;
+    height:50px;
+    border-radius:5px;
+    margin:auto;
+    background-color:#3C6478;
+}
+#rect_1{
+    animation:different 3s ease-in-out infinite; 
+}
+#rect_4{
+    animation:different 3s ease-in-out infinite;
+}
+#rect_2{
+    animation:different_2 3s ease-in-out infinite;
+}
+#rect_3{
+    animation:different_2 3s ease-in-out infinite;
+}
+@keyframes different{
+    25%{
+        width:120px;
+    }
+    50%{
+        transform:rotateZ(360deg);
+    }
+}
+@keyframes different_2{
+    25%{
+        background-color:transparent;
+        width:0px;
+        z-index:-3;
+    }
+    50%{
+        transform:rotateY(-360deg);
+    }
+}
+
+/* animation-28 */
+.squ{
+    display: flex;
+    flex-wrap:wrap;
+    width:130px;
+    height:130px;
+    border-radius:10px;
+    margin:20px;
+}
+.squ_{
+    width:50px;
+    height:50px;
+    border-radius:5px;
+    margin:auto;
+    background-color:rgb(23, 74, 124);
+}
+#squ_1{
+    animation:radar 1s infinite ease-in-out;
+}
+#squ_2{
+    animation:radar_2 1s infinite ease-in-out;
+}
+#squ_3{
+    animation:radar 1s infinite ease-in-out;
+    animation-delay:0.5s
+}
+#squ_4{
+    animation:radar_2 1s infinite ease-in-out;
+    animation-delay:0.5s;
+}
+@keyframes radar{
+    50%{
+        width:100px;
+        transform:rotateX(180deg);
+        background-color:#B9D9EB
+    }
+}
+@keyframes radar_2{
+    50%{
+        width:0px;
+        transform:rotateX(-180deg);
     }
 }
