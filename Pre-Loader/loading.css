@@ -857,6 +857,7 @@ body{
     25%{
         background-color:transparent;
         width:0px;
+        visibility:hidden;
         z-index:-3;
     }
     50%{
@@ -905,6 +906,107 @@ body{
     50%{
         width:0px;
         transform:rotateX(-180deg);
+    }
+}
+
+/* animation-29 */
+.change{
+    display: flex;
+    flex-wrap:wrap;
+    width:130px;
+    height:130px;
+    border-radius:10px;
+    margin:20px;
+    animation: new 3s ease-in-out infinite ;
+}
+.changer_{
+    width:50px;
+    height:50px;
+    border-radius:5px;
+    margin:auto;
+    background-color:rgb(48, 170, 125);
+}
+#changer_1{
+    animation:changer_1 3s infinite ease-in-out; 
+}
+#changer_2{
+    animation:changer_2 3s infinite ease-in-out; 
+}
+#changer_3{
+    animation:changer_3 3s infinite ease-in-out; 
+}
+#changer_4{
+    animation:changer_4 3s infinite ease-in-out; 
+}
+@keyframes changer_1{
+    50%{
+        border-radius:100% 0px 0px 0px;
+        margin:auto 0px 0px auto;
+    }
+}
+@keyframes changer_2{
+    50%{
+        border-radius:0px 100% 0px 0px;
+        margin:auto auto 0px 0px;
+        transform:scale(0.5);
+    }
+}
+@keyframes changer_3{
+    50%{
+        border-radius:0px 0px 0px 100%;
+        margin:0px 0px auto auto;
+        transform:scale(0.5);
+    }
+}
+@keyframes changer_4{
+    50%{
+        border-radius:0px 0px 100% 0px;
+        margin:0px auto auto 0px;
+    }
+}
+
+/* animation-30 */
+.cheat{
+    display: flex;
+    flex-wrap:wrap;
+    width:130px;
+    height:130px;
+    border-radius:10px;
+    margin:20px;
+    animation: new 3s ease-in-out infinite ;
+}
+.cheater_{
+    width:50px;
+    height:50px;
+    margin:auto;
+    background-color:rgb(220, 145, 25);
+}
+#cheater_1{
+    border-radius:100% 0px 0px 0px;
+    margin:auto 0px 0px auto;
+}
+#cheater_2{
+    animation:cheater_2 3s infinite ease-in-out; 
+    border-radius:0px 100% 0px 0px;
+    margin:auto auto 0px 0px;
+}
+#cheater_3{
+    animation:cheater_3 3s infinite ease-in-out; 
+    border-radius:0px 0px 0px 100%;
+    margin:0px 0px auto auto;
+}
+#cheater_4{
+    border-radius:0px 0px 100% 0px;
+    margin:0px auto auto 0px;
+}
+@keyframes cheater_2{
+    50%{
+        transform:scale(0);
+    }
+}
+@keyframes cheater_3{
+    50%{
+        transform:scale(0);
     }
 }
 
