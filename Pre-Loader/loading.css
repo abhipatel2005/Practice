@@ -917,51 +917,55 @@ body{
     height:130px;
     border-radius:10px;
     margin:20px;
-    animation: new 3s ease-in-out infinite ;
+    animation: new 3s ease-in-out infinite;
 }
 .changer_{
     width:50px;
     height:50px;
-    border-radius:5px;
+    /* border-radius:5px; */
     margin:auto;
     background-color:rgb(48, 170, 125);
 }
 #changer_1{
-    animation:changer_1 3s infinite ease-in-out; 
+    animation:changer_1 3s infinite ease-in-out alternate; 
+    margin:auto 0px 0px auto;
+    border-radius:10px 0px 0px 0px;
 }
 #changer_2{
-    animation:changer_2 3s infinite ease-in-out; 
+    animation:changer_2 3s infinite ease-in-out alternate; 
+    margin:auto auto 0px 0px;
+    border-radius:0px 10px 0px 0px;
 }
 #changer_3{
-    animation:changer_3 3s infinite ease-in-out; 
+    animation:changer_3 3s infinite ease-in-out alternate; 
+    margin:0px 0px auto auto;
+    border-radius:0px 0px 0px 10px;
 }
 #changer_4{
-    animation:changer_4 3s infinite ease-in-out; 
+    animation:changer_4 3s infinite ease-in-out alternate; 
+    margin:0px auto auto 0px;
+    border-radius:0px 0px 10px 0px;
 }
 @keyframes changer_1{
     50%{
         border-radius:100% 0px 0px 0px;
-        margin:auto 0px 0px auto;
     }
 }
 @keyframes changer_2{
     50%{
         border-radius:0px 100% 0px 0px;
-        margin:auto auto 0px 0px;
         transform:scale(0.5);
     }
 }
 @keyframes changer_3{
     50%{
         border-radius:0px 0px 0px 100%;
-        margin:0px 0px auto auto;
         transform:scale(0.5);
     }
 }
 @keyframes changer_4{
     50%{
         border-radius:0px 0px 100% 0px;
-        margin:0px auto auto 0px;
     }
 }
 
@@ -1008,6 +1012,40 @@ body{
     50%{
         transform:scale(0);
     }
+}
+
+/* animation-31 */
+.grabber{
+    margin:50px 10px 20px 50px;
+}
+.grab{
+    width:40px;
+    height:40px;
+    border-radius:50%;
+}
+#grab_1{
+    background-color:rgb(23, 74, 124,0.9);
+    animation:moving 2s infinite ease-in-out;
+}
+#grab_2{
+    position:relative;
+    background-color:rgb(23, 126, 145,0.6); 
+    top:-40px;
+    z-index:-1;
+    animation:moving 2s infinite ease-in-out;
+    animation-delay:0.1s;
+}
+#grab_3{
+    position:relative;
+    background-color:rgb(22, 86, 98,0.3);
+    top:-80px;
+    z-index:-2;
+    animation:moving 2s infinite ease-in-out;
+    animation-delay:0.2s;
+}
+@keyframes moving{
+    from { transform: rotate(0deg) translateX(50px) rotate(0deg); }
+    to   { transform: rotate(360deg) translateX(50px) rotate(-360deg); }
 }
 
 /* media query */
