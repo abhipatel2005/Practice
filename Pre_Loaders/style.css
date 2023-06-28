@@ -1,5 +1,11 @@
 .col{
-    background-color:yellow;
+    background-color:var(--bs-light);
+    border-radius:10px;
+    box-shadow:3px 1px 2px rgb(0,0,0,0.1);
+    transition:all 0.3s;
+}
+.col:hover{
+    transform:scale(1.1);
 }
 :root{
     --circle-radius:50%;
@@ -7,6 +13,10 @@
 .dim{
     width:150px;
     height:150px;
+}
+.s_dim{
+    width:60px;
+    height:60px;
 }
 .loading{
     border-radius: var(--circle-radius);
@@ -143,7 +153,6 @@
 #small_2{animation-delay:0.3s;}
 #small_3{animation-delay:0.6s;}
 .co{
-    margin:10px;
     display: flex;
 }
 .co_1{
@@ -172,8 +181,6 @@
     100%{rotate: 360deg;}
 }
 .gol{
-    width:50px;
-    height:50px;
     border-radius:50%;
     margin:auto;
 }
@@ -234,8 +241,6 @@
     animation: new 3s ease-in-out infinite both;
 }
 .cho{
-    width:60px;
-    height:60px;
     margin:auto;
 }
 #cho_1{
@@ -283,7 +288,6 @@
     background-color:whitesmoke;
     border-radius: 20px;
     margin:5px;
-    margin-top:30%;
 }
 .slider{
     width:50px;
@@ -400,9 +404,9 @@
     display: flex;
 }
 .two{
-    width:100px;
-    height:100px;
-    border-radius: 50%;
+    width:70px;
+    height:70px;
+    border-radius:var(--circle-radius);
     margin:auto;
 }
 #two_1{
@@ -416,24 +420,19 @@
 @keyframes far{
     0%{transform:scale(1.0);transform:scale(0.8)}
     50%{transform:translate(100px)}
-    100%{transform:translate(-0px);transform:scale(0.8)}
+    100%{transform:translate(-0px);transform:scale(0.8);z-index:2}
 }
 @keyframes far_1{
     0%{transform:scale(1.0)}
     50%{transform:translate(-100px)}
-    100%{transform:translate(0px);z-index:-1;}
+    100%{transform:translate(0px);z-index:1;}
 }
 .triangle{
-    width:100px;
-    height:100px;
-    margin:10px;
     border-radius:10px;
     display:flex;
     flex-wrap:wrap;
 }
 .trio{
-    width:40px;
-    height:40px;
     margin:auto;
     border:5px solid black;
     border-radius:5px;
@@ -452,8 +451,6 @@
     /* border-radius:10px; */
 }
 .disc{
-    width:60px;
-    height:60px;
     border-radius:5px;
     margin:auto;
 }
@@ -499,4 +496,375 @@
     50%{transform:translate3d(-65px,-65px,0px)}
     75%{transform:translate3d(0px,-65px,0px)}
     100%{transform:translate3d(0px,0px,0px)}
+}
+.diff{
+    display: flex;
+    flex-wrap:wrap;
+}
+.pasa{
+    border-radius:5px;
+    margin:auto;
+}
+#pa_1{
+    background-color:red;
+    animation:pasa_1 3s infinite ease-in-out;
+}
+#pa_2{background-color:green;
+    animation:pasa_2 3s infinite ease-in-out ;
+}
+#pa_3{background-color:blue;
+    animation:pasa_3 3s infinite ease-in-out;
+}
+#pa_4{
+    background-color:yellow;
+    animation:pasa_4 3s infinite ease-in-out;
+}
+@keyframes pasa_1{
+    0%{transform:scale(1)}
+    20%{transform:translate3d(65px,0px,0px)}
+    40%{transform:translate3d(65px,65px,0px)}
+    60%{transform:translate3d(0px,65px,0px)}
+    80%{transform:translate3d(0px,0px,0px)}
+    100%{transform:translate3d(0px,0px,0px)}
+}
+@keyframes pasa_2{
+    0%{transform:scale(1.0)}
+    20%{transform:translate3d(0px,0px,0px)}
+    40%{transform:translate3d(0px,65px,0px)}
+    60%{transform:translate3d(-65px,65px,0px)}
+    80%{transform:translate3d(-65px,0px,0px)}
+    100%{transform: translate3d(0px,0px,0px);}
+}
+@keyframes pasa_4{
+    0%{transform:scale(1.0)}
+    20%{transform:translate3d(0px,0px,0px)}
+    40%{transform:translate3d(0px,0px,0px)}
+    60%{transform:translate3d(-65px,0px,0px)}
+    80%{transform:translate3d(-65px,-65px,0px)}
+    100%{transform:translate3d(0px,0px,0px)}
+}
+@keyframes pasa_3{
+    0%{transform:scale(1.0)}
+    20%{transform:translate3d(0px,0px,0px)}
+    40%{transform:translate3d(0px,0px,0px)}
+    60%{transform:translate3d(0px,0px,0px)}
+    80%{transform:translate3d(0px,-65px,0px)}
+    100%{transform:translate3d(0px,0px,0px)}
+}
+.move{
+    border-radius:10px;
+    background-color:#B9D9EB;
+}
+.move_1{
+    width:130px;
+    height:40px;
+    margin:10px auto;
+    border-radius:10px;
+}
+.move_2{
+    width:40px;
+    height:40px;
+    background-color:#003153;
+    border-radius:10px;
+    animation: diff 2s infinite ease-in-out;
+}
+#diff_1{
+    animation-delay:0.25s;
+}
+#diff_2{
+    animation-delay:0.5s;
+}
+@keyframes diff{
+    0%{width:50px}
+    25%{width:130px;}
+    50%{width:75px;}
+    75%{width:100px}
+    100%{width:40px;}
+}
+.fanner{
+    animation: fan 4s infinite ease-in-out;
+}
+.fan{
+    width:50px;
+    height:50px;
+    background: radial-gradient(yellow,orange,rgb(235, 166, 38));
+    animation:golakar 4s infinite ease-in-out alternate;  
+}
+#fan_1{
+    position:relative;
+    top:15px;
+    left:15px;
+    border-radius:30px 20px 0px 20px;
+}
+#fan_2{
+    position:relative;
+    top:-35px;
+    left:70px;
+    border-radius:20px 30px 20px 0px;
+}
+#fan_3{
+    position: relative;
+    top:-30px;
+    left:15px;
+    border-radius:20px 0px 20px 30px;
+}
+#fan_4{
+    position: relative;
+    top:-80px;
+    left:70px;
+    border-radius:0px 20px 30px 20px;
+}
+@keyframes fan{
+    0%{scale:1}
+    100%{rotate:360deg;}
+}
+@keyframes golakar{
+    0%{scale:1.0}
+    50%{rotate:360deg}
+    100%{scale: 1.0}
+}
+.shapes{
+    background-color:rgb(22, 86, 98);
+    border-radius:var(--circle-radius);
+    animation:change 1s infinite alternate;
+}
+@keyframes change{
+    0%{opacity:0.5}
+    50%{transform: scale(0.7);}
+    100%{transform:scale(1.0)}
+}
+.badal{
+    border-radius:50%;
+    border:15px solid black;
+}
+.badal_2{
+    position:absolute;
+    margin:10px;
+    height:100px;
+    width:100px;
+    border-radius:50%;
+    border:15px solid black;
+    animation:changing 1.7s ease-in-out infinite;
+}
+@keyframes changing{
+    0%{scale:1.0;}
+    100%{transform:rotateY(-360deg)}
+}
+.changer{
+    animation: new 3s linear infinite ;
+}
+.accepter{
+    width:130px;
+    height:130px;
+    background-color:#002E6E;
+    margin: 10px auto;
+    animation:accept 3s infinite ease-in-out;
+}
+@keyframes accept {
+    25%{
+        border-radius:100% 0px 0px 0px;
+    }
+    50%{
+        border-radius:100% 100% 0px 0px;
+    }
+    75%{
+        border-radius:100% 100% 100% 100%;
+    }
+}
+.rect{
+    display: flex;
+    flex-wrap:wrap;
+    animation: new 3s ease-in-out infinite ;
+}
+.rect_{
+    border-radius:5px;
+    margin:auto;
+    background-color:#3C6478;
+}
+#rect_1{
+    animation:different 3s ease-in-out infinite; 
+}
+#rect_4{
+    animation:different 3s ease-in-out infinite;
+}
+#rect_2{
+    animation:different_2 3s ease-in-out infinite;
+}
+#rect_3{
+    animation:different_2 3s ease-in-out infinite;
+}
+@keyframes different{
+    25%{
+        width:120px;
+    }
+    50%{
+        transform:rotateZ(360deg);
+    }
+}
+@keyframes different_2{
+    25%{
+        background-color:transparent;
+        width:0px;
+        visibility:hidden;
+        z-index:-3;
+    }
+    50%{
+        transform:rotateY(-360deg);
+    }
+}
+.squ{
+    display: flex;
+    flex-wrap:wrap;
+}
+.squ_{
+    border-radius:5px;
+    margin:auto;
+    background-color:rgb(23, 74, 124);
+}
+#squ_1{
+    animation:radar 1s infinite ease-in-out;
+}
+#squ_2{
+    animation:radar_2 1s infinite ease-in-out;
+}
+#squ_3{
+    animation:radar 1s infinite ease-in-out;
+    animation-delay:0.5s
+}
+#squ_4{
+    animation:radar_2 1s infinite ease-in-out;
+    animation-delay:0.5s;
+}
+@keyframes radar{
+    50%{
+        width:100px;
+        transform:rotateX(180deg);
+        background-color:#B9D9EB
+    }
+}
+@keyframes radar_2{
+    50%{
+        width:0px;
+        transform:rotateX(-180deg);
+    }
+}
+.change{
+    display: flex;
+    flex-wrap:wrap;
+    animation: new 3s ease-in-out infinite;
+}
+.changer_{
+    margin:auto;
+    background-color:rgb(48, 170, 125);
+}
+#changer_1{
+    animation:changer_1 3s infinite ease-in-out alternate; 
+    margin:auto 0px 0px auto;
+    border-radius:10px 0px 0px 0px;
+}
+#changer_2{
+    animation:changer_2 3s infinite ease-in-out alternate; 
+    margin:auto auto 0px 0px;
+    border-radius:0px 10px 0px 0px;
+}
+#changer_3{
+    animation:changer_3 3s infinite ease-in-out alternate; 
+    margin:0px 0px auto auto;
+    border-radius:0px 0px 0px 10px;
+}
+#changer_4{
+    animation:changer_4 3s infinite ease-in-out alternate; 
+    margin:0px auto auto 0px;
+    border-radius:0px 0px 10px 0px;
+}
+@keyframes changer_1{
+    50%{
+        border-radius:100% 0px 0px 0px;
+    }
+}
+@keyframes changer_2{
+    50%{
+        border-radius:0px 100% 0px 0px;
+        transform:scale(0.5);
+    }
+}
+@keyframes changer_3{
+    50%{
+        border-radius:0px 0px 0px 100%;
+        transform:scale(0.5);
+    }
+}
+@keyframes changer_4{
+    50%{
+        border-radius:0px 0px 100% 0px;
+    }
+}
+.cheat{
+    display: flex;
+    flex-wrap:wrap;
+    animation: new 3s ease-in-out infinite ;
+}
+.cheater_{
+    margin:auto;
+    background-color:rgb(220, 145, 25);
+}
+#cheater_1{
+    border-radius:100% 0px 0px 0px;
+    margin:auto 0px 0px auto;
+}
+#cheater_2{
+    animation:cheater_2 3s infinite ease-in-out; 
+    border-radius:0px 100% 0px 0px;
+    margin:auto auto 0px 0px;
+}
+#cheater_3{
+    animation:cheater_3 3s infinite ease-in-out; 
+    border-radius:0px 0px 0px 100%;
+    margin:0px 0px auto auto;
+}
+#cheater_4{
+    border-radius:0px 0px 100% 0px;
+    margin:0px auto auto 0px;
+}
+@keyframes cheater_2{
+    50%{
+        transform:scale(0);
+    }
+}
+@keyframes cheater_3{
+    50%{
+        transform:scale(0);
+    }
+}
+.grabber{
+    margin:50px 30px 20px 20px;
+}
+.grab{
+    width:40px;
+    height:40px;
+    border-radius:50%;
+}
+#grab_1{
+    background-color:rgb(23, 74, 124,0.9);
+    animation:moving 2s infinite ease-in-out;
+}
+#grab_2{
+    position:relative;
+    background-color:rgb(23, 126, 145,0.6); 
+    top:-40px;
+    z-index:2;
+    animation:moving 2s infinite ease-in-out;
+    animation-delay:0.1s;
+}
+#grab_3{
+    position:relative;
+    background-color:rgb(22, 86, 98,0.3);
+    top:-80px;
+    z-index:1;
+    animation:moving 2s infinite ease-in-out;
+    animation-delay:0.2s;
+}
+@keyframes moving{
+    from { transform: rotate(0deg) translateX(50px) rotate(0deg); }
+    to   { transform: rotate(360deg) translateX(50px) rotate(-360deg); }
 }
