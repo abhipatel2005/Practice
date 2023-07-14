@@ -884,3 +884,21 @@
     75%{border-top:10px solid transparent}
     100%{border-right:10px solid transparent}
 }
+.ui{
+    border: 15px solid rgb(23, 74, 124);
+    border-radius: var(--circle-radius);
+}
+.roller{
+    width:17px;
+    height:17px;
+    border-radius:var(--circle-radius);
+    background-color:lightgreen;
+    position:relative;
+    top:44%;
+    right:-44%;
+    animation:oneui 2s infinite ease;
+}
+@keyframes oneui{
+    from { transform: rotate(0deg) translateX(67px) rotate(0deg); }
+    to   { transform: rotate(360deg) translateX(67px) rotate(-360deg); }
+}
