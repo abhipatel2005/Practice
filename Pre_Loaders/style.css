@@ -884,6 +884,7 @@
     75%{border-top:10px solid transparent}
     100%{border-right:10px solid transparent}
 }
+/* animation-32 */
 .ui{
     border: 15px solid rgb(23, 74, 124);
     border-radius: var(--circle-radius);
@@ -901,4 +902,35 @@
 @keyframes oneui{
     from { transform: rotate(0deg) translateX(67px) rotate(0deg); }
     to   { transform: rotate(360deg) translateX(67px) rotate(-360deg); }
+}
+/* animation-33 */
+.fall{
+    display: flex;
+    justify-content: space-between;
+}
+.faller{
+    width:30px;
+    height:30px;
+    border-radius: var(--circle-radius);
+    background-color:blue;
+    animation:fell 3s ease infinite;
+}
+@keyframes fell{
+    25% {
+        transform:translateY(0px);
+        box-shadow: 0 0 5px navy;
+    }
+    75%{
+        transform: translateY(100px);
+        box-shadow: 0 40px 40px rgb(24,74,124);
+    }
+}
+#faller_2{
+    animation-delay: 0.2s;
+}
+#faller_3{
+    animation-delay:0.4s;
+}
+#faller_4{
+    animation-delay:0.6s;
 }
