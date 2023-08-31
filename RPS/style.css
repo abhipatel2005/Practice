@@ -8,8 +8,8 @@ img{
     margin:10px;
 }
 img:hover{
-    border-radius:30px;
-    box-shadow:3px 3px 5px 5px grey;
+    border-radius:50px;
+    box-shadow:1px 1px 10px 1px gray;
 }
 .cmp{
     display: none;
@@ -26,4 +26,28 @@ button{
     margin:10px;
     border-radius: 10px;
     box-shadow:1px 1px 10px 1px gray;
+}
+#animate{
+    border-radius: 30px;
+    border-bottom:10px solid green;
+    margin:10px;
+}
+#danimate{
+    opacity:0.5;
+    
+}
+@media (max-width:769px) {
+    img{
+        width:180px;
+        height:180px;
+        border-radius:20px;
+    }
+}
+@media (max-width:426px){
+    img{
+        width:120px;
+        height:120px;
+        border-radius:20px;
+        margin:0px;
+    }
 }

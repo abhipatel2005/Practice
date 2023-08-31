@@ -31,12 +31,18 @@ let getImageName = function() {
 
         if (userc == compc) {
                 document.querySelector("h2").textContent = "It's Tie...!";
+                document.querySelector(".cmp .user").setAttribute("id", "animate");
+                document.querySelector(".cmp .comp").setAttribute("id", "animate");
         } 
         else if((userc == 2 && compc == 1) || (userc == 1 && compc == 3) || (userc == 3 && compc == 2)){
                 document.querySelector("h2").textContent = "User Won...!";
+                document.querySelector(".cmp .user").setAttribute("id", "animate");
+                document.querySelector(".cmp .comp").setAttribute("id", "danimate");
         }
         else {
                 document.querySelector("h2").textContent = "Computer Won...!";
+                document.querySelector(".cmp .comp").setAttribute("id", "animate");
+                document.querySelector(".cmp .user").setAttribute("id", "danimate");
         }
     }
     }
@@ -48,4 +54,5 @@ document.querySelector("#rematch").addEventListener("click",() => {
         document.querySelector(".uchoice").setAttribute("id", "show");
         document.querySelector(".cmp").setAttribute("id", "hidden");
         document.querySelector("h2").textContent = "Select your Choice";
+        window.location.reload();
 })
