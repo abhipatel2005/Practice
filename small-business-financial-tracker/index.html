@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business Financial Tracker</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="dashboard">
+        <div class="summary">
+            <div class="summary-card income-card">
+                <h3>Total Income</h3>
+                <p id="totalIncome">₹0</p>
+            </div>
+            <div class="summary-card expense-card">
+                <h3>Total Expenses</h3>
+                <p id="totalExpenses">₹0</p>
+            </div>
+            <div class="summary-card balance-card">
+                <h3>Balance</h3>
+                <p id="balance">₹0</p>
+            </div>
+        </div>
+    </div>
+    <!-- <div class="search-container w-50 m-auto mt-3">
+        <div class="input-wrapper">
+            <input type="text" id="searchInput" class="input-with-icon" placeholder="Search transactions...">
+            <button class="mic-icon" onclick="startVoiceRecognition('search')" title="Voice Search"><svg
+                    xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-mic-fill"
+                    viewBox="0 0 16 16">
+                    <path d="M5 3a3 3 0 0 1 6 0v5a3 3 0 0 1-6 0z" />
+                    <path
+                        d="M3.5 6.5A.5.5 0 0 1 4 7v1a4 4 0 0 0 8 0V7a.5.5 0 0 1 1 0v1a5 5 0 0 1-4.5 4.975V15h3a.5.5 0 0 1 0 1h-7a.5.5 0 0 1 0-1h3v-2.025A5 5 0 0 1 3 8V7a.5.5 0 0 1 .5-.5" />
+                </svg></button>
+        </div>
+        <div class="search-results" id="searchResults"></div>
+    </div> -->
+    <div class="main-container">
+        <div class="calendar-container">
+            <div class="calendar-header">
+                <div class="calendar-nav">
+                    <button onclick="previousMonth()">&lt;</button>
+                    <h2 id="currentMonth">Month Year</h2>
+                    <button onclick="nextMonth()">&gt;</button>
+                </div>
+            </div>
+            <div class="calendar" id="calendar"></div>
+        </div>
+
+        <div class="transactions-container">
+            <div class="transactions-header">
+                <h2 id="selectedDateDisplay">Today's Transactions</h2>
+                <div class="search-container">
+                    <div class="input-wrapper">
+                        <input type="text" id="searchInput" class="input-with-icon"
+                            placeholder="Search transactions...">
+                        <button class="mic-icon" onclick="startVoiceRecognition('search')" title="Voice Search"><svg
+                                xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-mic-fill" viewBox="0 0 16 16">
+                                <path d="M5 3a3 3 0 0 1 6 0v5a3 3 0 0 1-6 0z" />
+                                <path
+                                    d="M3.5 6.5A.5.5 0 0 1 4 7v1a4 4 0 0 0 8 0V7a.5.5 0 0 1 1 0v1a5 5 0 0 1-4.5 4.975V15h3a.5.5 0 0 1 0 1h-7a.5.5 0 0 1 0-1h3v-2.025A5 5 0 0 1 3 8V7a.5.5 0 0 1 .5-.5" />
+                            </svg></button>
+                    </div>
+                    <div class="search-results" id="searchResults"></div>
+                </div>
+            </div>
+
+            <div class="transaction-panels">
+                <div class="transaction-panel income-panel">
+                    <h3>Income</h3>
+                    <div class="input-wrapper">
+                        <input type="number" id="incomeAmount" class="input-with-icon" placeholder="Amount" step="0.01"
+                            min="0">
+                        <button class="mic-icon" onclick="startVoiceRecognition('incomeAmount')"
+                            title="Voice Input"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                fill="currentColor" class="bi bi-mic-fill" viewBox="0 0 16 16">
+                                <path d="M5 3a3 3 0 0 1 6 0v5a3 3 0 0 1-6 0z" />
+                                <path
+                                    d="M3.5 6.5A.5.5 0 0 1 4 7v1a4 4 0 0 0 8 0V7a.5.5 0 0 1 1 0v1a5 5 0 0 1-4.5 4.975V15h3a.5.5 0 0 1 0 1h-7a.5.5 0 0 1 0-1h3v-2.025A5 5 0 0 1 3 8V7a.5.5 0 0 1 .5-.5" />
+                            </svg></button>
+                    </div>
+                    <div class="input-wrapper">
+                        <input type="text" id="incomeDescription" class="input-with-icon" placeholder="Description">
+                        <button class="mic-icon" onclick="startVoiceRecognition('incomeDescription')"
+                            title="Voice Input"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                fill="currentColor" class="bi bi-mic-fill" viewBox="0 0 16 16">
+                                <path d="M5 3a3 3 0 0 1 6 0v5a3 3 0 0 1-6 0z" />
+                                <path
+                                    d="M3.5 6.5A.5.5 0 0 1 4 7v1a4 4 0 0 0 8 0V7a.5.5 0 0 1 1 0v1a5 5 0 0 1-4.5 4.975V15h3a.5.5 0 0 1 0 1h-7a.5.5 0 0 1 0-1h3v-2.025A5 5 0 0 1 3 8V7a.5.5 0 0 1 .5-.5" />
+                            </svg></button>
+                    </div>
+                    <button onclick="addTransaction('income')">Add Income</button>
+                    <div class="transaction-list" id="incomeList"></div>
+                </div>
+
+                <div class="transaction-panel expense-panel">
+                    <h3>Expenses</h3>
+                    <div class="input-wrapper">
+                        <input type="number" id="expenseAmount" class="input-with-icon" placeholder="Amount" step="0.01"
+                            min="0">
+                        <button class="mic-icon" onclick="startVoiceRecognition('expenseAmount')"
+                            title="Voice Input"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                fill="currentColor" class="bi bi-mic-fill" viewBox="0 0 16 16">
+                                <path d="M5 3a3 3 0 0 1 6 0v5a3 3 0 0 1-6 0z" />
+                                <path
+                                    d="M3.5 6.5A.5.5 0 0 1 4 7v1a4 4 0 0 0 8 0V7a.5.5 0 0 1 1 0v1a5 5 0 0 1-4.5 4.975V15h3a.5.5 0 0 1 0 1h-7a.5.5 0 0 1 0-1h3v-2.025A5 5 0 0 1 3 8V7a.5.5 0 0 1 .5-.5" />
+                            </svg></button>
+                    </div>
+                    <div class="input-wrapper">
+                        <input type="text" id="expenseDescription" class="input-with-icon" placeholder="Description">
+                        <button class="mic-icon" onclick="startVoiceRecognition('expenseDescription')"
+                            title="Voice Input"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                fill="currentColor" class="bi bi-mic-fill" viewBox="0 0 16 16">
+                                <path d="M5 3a3 3 0 0 1 6 0v5a3 3 0 0 1-6 0z" />
+                                <path
+                                    d="M3.5 6.5A.5.5 0 0 1 4 7v1a4 4 0 0 0 8 0V7a.5.5 0 0 1 1 0v1a5 5 0 0 1-4.5 4.975V15h3a.5.5 0 0 1 0 1h-7a.5.5 0 0 1 0-1h3v-2.025A5 5 0 0 1 3 8V7a.5.5 0 0 1 .5-.5" />
+                            </svg></button>
+                    </div>
+                    <button onclick="addTransaction('expense')">Add Expense</button>
+                    <div class="transaction-list" id="expenseList"></div>
+                </div>
+            </div>
+        </div>
+        <script src="app.js"></script>
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
+</body>
+
+</html>
